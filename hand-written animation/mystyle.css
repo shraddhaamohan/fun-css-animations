@@ -1,0 +1,82 @@
+body {
+    background-color: #151515;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#t {
+    stroke-dasharray: 280;
+    animation: fillSvgT 500ms linear;
+}
+
+#dash {
+    stroke-dasharray: 112;
+    animation: fillSvgDash 200ms linear 500ms,  showLetter 600ms ease;
+
+}
+
+#e {
+    stroke-dasharray: 277;
+    animation: 800ms fillSvgE linear 700ms, 900ms showLetter linear;
+}
+
+#am {
+    stroke-dasharray: 856;
+    animation: 1300ms fillSvgAm linear 1500ms, 1800ms showLetter linear;
+}
+
+@keyframes showLetter {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fillSvgT {
+    0%{
+        stroke-dashoffset: 280;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@keyframes fillSvgDash {
+    0%{
+        stroke-dashoffset: 112;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillSvgE {
+    0%{
+        stroke-dashoffset: 277;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@keyframes fillSvgAm {
+    0%{
+        stroke-dashoffset: 856;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
